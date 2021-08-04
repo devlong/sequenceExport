@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		FDDCBE4D26BA9F850078F437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDCBE4B26BA9F850078F437 /* Main.storyboard */; };
 		FDDCBE4F26BA9F880078F437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDCBE4E26BA9F880078F437 /* Assets.xcassets */; };
 		FDDCBE5226BA9F880078F437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDDCBE5026BA9F880078F437 /* LaunchScreen.storyboard */; };
+		FDDCBE5A26BA9FCA0078F437 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = FDDCBE5926BA9FCA0078F437 /* Sounds */; };
+		FDDCBE5C26BA9FD50078F437 /* SequenceExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCBE5B26BA9FD50078F437 /* SequenceExport.swift */; };
+		FDDCBE5F26BAA0E60078F437 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = FDDCBE5E26BAA0E60078F437 /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		FDDCBE4E26BA9F880078F437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDDCBE5126BA9F880078F437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDDCBE5326BA9F880078F437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDCBE5926BA9FCA0078F437 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		FDDCBE5B26BA9FD50078F437 /* SequenceExport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDCBE5F26BAA0E60078F437 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,8 @@
 		FDDCBE4426BA9F850078F437 /* SequenceExportDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FDDCBE5B26BA9FD50078F437 /* SequenceExport.swift */,
+				FDDCBE5926BA9FCA0078F437 /* Sounds */,
 				FDDCBE4526BA9F850078F437 /* AppDelegate.swift */,
 				FDDCBE4726BA9F850078F437 /* SceneDelegate.swift */,
 				FDDCBE4926BA9F850078F437 /* ViewController.swift */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = SequenceExportDemo;
+			packageProductDependencies = (
+				FDDCBE5E26BAA0E60078F437 /* AudioKit */,
+			);
 			productName = SequenceExportDemo;
 			productReference = FDDCBE4226BA9F850078F437 /* SequenceExportDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +121,9 @@
 				Base,
 			);
 			mainGroup = FDDCBE3926BA9F850078F437;
+			packageReferences = (
+				FDDCBE5D26BAA0E60078F437 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = FDDCBE4326BA9F850078F437 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +140,7 @@
 			files = (
 				FDDCBE5226BA9F880078F437 /* LaunchScreen.storyboard in Resources */,
 				FDDCBE4F26BA9F880078F437 /* Assets.xcassets in Resources */,
+				FDDCBE5A26BA9FCA0078F437 /* Sounds in Resources */,
 				FDDCBE4D26BA9F850078F437 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,7 @@
 			files = (
 				FDDCBE4A26BA9F850078F437 /* ViewController.swift in Sources */,
 				FDDCBE4626BA9F850078F437 /* AppDelegate.swift in Sources */,
+				FDDCBE5C26BA9FD50078F437 /* SequenceExport.swift in Sources */,
 				FDDCBE4826BA9F850078F437 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDDCBE5D26BAA0E60078F437 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDDCBE5E26BAA0E60078F437 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDDCBE5D26BAA0E60078F437 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDDCBE3A26BA9F850078F437 /* Project object */;
 }
